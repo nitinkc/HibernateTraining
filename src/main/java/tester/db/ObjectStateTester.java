@@ -5,7 +5,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 import d2.data.hasA.singleTable.Apple;
-import d2.data.hasA.singleTable.Student;
 
 public class ObjectStateTester {
 	public static void main(String[] args) {

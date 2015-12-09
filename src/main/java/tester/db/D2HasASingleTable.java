@@ -4,52 +4,44 @@ package tester.db;
  * HAS-A Relationship between User class and Address Class
  * One Table for all the classes  
  */
-import java.util.ArrayList;
-import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
 import d2.data.hasA.singleTable.Address;
-import d2.data.hasA.singleTable.Student;
 import d2.data.hasA.singleTable.User;
 
 public class D2HasASingleTable {
 	public static void main(String[] args) {
 		
-		Address address=new Address();
-		address.setPincode(112233);
-		address.setCity("New Delhi");
+		/* 3 address that are used in the User Class*/
+		Address address1=new Address();
+		address1.setPincode(112233);
+		address1.setCity("New Delhi");
 		
 		Address address2=new Address();
 		address2.setPincode(998877);
 		address2.setCity("Mumbai");
 		
-		
 		Address address3=new Address();
 		address3.setPincode(774411);
 		address3.setCity("Chennai");
 		
-		List<Address> addresses=new ArrayList<Address>();
-		addresses.add(address);
-		addresses.add(address2);
-		addresses.add(address3);
 		
-		User user=new User();
-		user.setuName("Nitin");
-		//user.setuAddress(address);
+		User user1=new User();
+		//U_id is automatically set
+		user1.setuName("Nitin");
+		user1.setuAddress(address1);
 		
-		/*user.setOfficeAddress(address);
-		user.setHomeAddress(address2);*/
-		
-		
-		/*User user2=new User();
+		User user2=new User();
 		user2.setuName("Sangram");
-		user2.setuAddress(address2);*/
+		user2.setuAddress(address2);
 		
-		user.setListOfAddresses(addresses);
-		
+		User user3=new User();
+		user3.setuName("Biloo");
+		user3.setuAddress(address3);
+				
 		
 		//loading the hibernate.cfg.xml file details
 		SessionFactory sessionFactory = new AnnotationConfiguration()
@@ -64,12 +56,13 @@ public class D2HasASingleTable {
 		
 		//Asking the HB to persist these objects in DB
 		// save() will fire Insert query
-		session.save(user);
-		//session.save(user2);
+		session.save(user1);
+		session.save(user2);
+		session.save(user3);
 		
-		
-		User user2=(User)session.load(User.class, 1);
-		System.out.println(user2.getListOfAddresses().get(0).getCity());
+		// Retreiving the data - Difference between get and load
+		User user=(User)session.load(User.class, 1);
+		System.out.println(user.getuId() + " - " + user.getuName() +" - "+ user.getuAddress().getCity());
 		
 		session.getTransaction().commit();
 		session.close();		

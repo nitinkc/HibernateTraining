@@ -38,11 +38,14 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
 		
-		<!-- User Defined Mapping Class (THE POJO CLASS THAT GOES INTO DB) -->
+		<!-- User Defined Mapping Class for the d1 Basic table test (THE POJO CLASS THAT GOES INTO DB) -->
 		<mapping class="d1.data.Student"/>
 		
-		<!-- <mapping class="com.pack.entity.Student"/>
-		<mapping class="com.pack.entity.User"/> -->
+		<!-- For the Has-A Relationship in a single table  -->
+		<mapping class="d2.data.hasA.singleTable.Address"/>
+		<mapping class="d2.data.hasA.singleTable.User"/>
+		
+		
 				
 	</session-factory>
 
