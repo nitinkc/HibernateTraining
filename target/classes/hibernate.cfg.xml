@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The XML prolog is optional. If it exists, it must come first in the document. -->
+
+<!-- UTF-8 is  the default encoding for XML, HTML5, CSS, JavaScript, PHP, and SQL.  -->
+<!-- The Unicode Standard covers (almost) all the characters, punctuations, and symbols in the world.
+     Unicode enables processing, storage, and transport of text, independent of platform and language.
+-->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!-- <DTD (Document Type Definition) info> -->
+
+
+<hibernate-configuration>
+
+	<session-factory>
+	
+		<!-- MySql Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- synergistic is the database name createDatabaseIfNotExist=true will create the database-->
+		<property name="connection.url">jdbc:mysql://localhost:3306/synergistic?createDatabaseIfNotExist=true</property>
+		<!-- Username and Password for the database -->
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">10</property>
+			
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Echo/Print all executed SQL to stdout/Console -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+		
+		<!-- User Defined Mapping Class (THE POJO CLASS THAT GOES INTO DB) -->
+		<mapping class="day1.data.entity.Student"/>
+		
+		<mapping class="com.pack.entity.Student"/>
+		<mapping class="com.pack.entity.User"/>
+				
+	</session-factory>
+
+</hibernate-configuration>
