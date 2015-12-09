@@ -5,7 +5,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 
 @Embeddable
-public class AddressHas_A {
+public class H2AddressHas_A {
 	//@Column(name="User_Pincode")
 	private int pincode;
 	

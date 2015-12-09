@@ -18,17 +18,28 @@ import org.hibernate.annotations.CollectionOfElements;
 
 @Entity
 @Table(name = "hasASingleTable")
-public class User {
+public class H2User {
+	
 	@Id
 	@Column(name="User_Id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int uId;
 	@Column(name="User_Name")
 	private String uName;
-	@Embedded
-	private Address uAddress;	
 	
-	//--------------------------//
+	/* The user can have multiple addresses
+	 * To resolve the column name convention 
+	 * @attributes annotation is used giving custom names to each column
+	 * 
+	 */
+	@Embedded
+	private H2AddressHas_A homeAddress;	
+	
+	@Embedded
+	private H2AddressHas_A officeAddress;
+	
+	
+	//------------	getters and setters----------------------//
 	public int getuId() {
 		return uId;
 	}
@@ -41,10 +52,16 @@ public class User {
 	public void setuName(String uName) {
 		this.uName = uName;
 	}
-	public Address getuAddress() {
-		return uAddress;
+	public H2AddressHas_A getHomeAddress() {
+		return homeAddress;
 	}
-	public void setuAddress(Address uAddress) {
-		this.uAddress = uAddress;
+	public void setHomeAddress(H2AddressHas_A homeAddress) {
+		this.homeAddress = homeAddress;
+	}
+	public H2AddressHas_A getOfficeAddress() {
+		return officeAddress;
+	}
+	public void setOfficeAddress(H2AddressHas_A officeAddress) {
+		this.officeAddress = officeAddress;
 	}
 }

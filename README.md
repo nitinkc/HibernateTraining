@@ -17,23 +17,17 @@ Important Annotationa
 
 ### Version
 3.2.0
-
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
-* [AngularJS] - HTML enhanced for web apps!
-* [Ace Editor] - awesome web-based text editor
-* [Marked] - a super fast port of Markdown to JavaScript
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-
-
 ### Installation
 
 You need Gulp installed globally:
 
-```sh
-$ npm i -g gulp
+```java
+	@Id
+	@Column(name="User_Id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int uId;
+	@Column(name="User_Name")
+	private String uName;
 ```
 
 ```sh

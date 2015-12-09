@@ -9,38 +9,39 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import d2.data.hasA.singleTable.H1Address;
-import d2.data.hasA.singleTable.H1User;
+import d2.data.hasA.singleTable.H2AddressHas_A;
+import d2.data.hasA.singleTable.H2User;;
 
-public class D2HasASingleTable {
+public class D3HasASingTabMultCol {
 	public static void main(String[] args) {
 		
 		/* 3 address that are used in the User Class*/
-		H1Address address1=new H1Address();
-		address1.setPincode(112233);
-		address1.setCity("New Delhi");
+		H2AddressHas_A myOfficeAddress=new H2AddressHas_A();
+		myOfficeAddress.setPincode(112233);
+		myOfficeAddress.setCity("New Delhi");
 		
-		H1Address address2=new H1Address();
-		address2.setPincode(998877);
-		address2.setCity("Mumbai");
+		H2AddressHas_A homeAddress=new H2AddressHas_A();
+		homeAddress.setPincode(998877);
+		homeAddress.setCity("Mumbai");
 		
-		H1Address address3=new H1Address();
-		address3.setPincode(774411);
-		address3.setCity("Chennai");
+		H2AddressHas_A hisOfficeAddress=new H2AddressHas_A();
+		hisOfficeAddress.setPincode(774411);
+		hisOfficeAddress.setCity("Chennai");
 		
 		
-		H1User user1=new H1User();
+		H2User user1=new H2User();
 		//U_id is automatically set
 		user1.setuName("Nitin");
-		user1.setuAddress(address1);
+		user1.setHomeAddress(homeAddress);
+		user1.setuAddress(myOfficeAddress);
 		
-		H1User user2=new H1User();
+		H2User user2=new H2User();
 		user2.setuName("Sangram");
-		user2.setuAddress(address2);
+		user2.setuAddress(homeAddress);
 		
-		H1User user3=new H1User();
+		H2User user3=new H2User();
 		user3.setuName("Biloo");
-		user3.setuAddress(address3);
+		user3.setuAddress(hisOfficeAddress);
 				
 		
 		//loading the hibernate.cfg.xml file details
