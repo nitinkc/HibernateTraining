@@ -39,10 +39,10 @@
 		<property name="hbm2ddl.auto">create</property>
 		
 		<!-- User Defined Mapping Class (THE POJO CLASS THAT GOES INTO DB) -->
-		<mapping class="day1.data.entity.Student"/>
+		<mapping class="d1.data.Student"/>
 		
-		<mapping class="com.pack.entity.Student"/>
-		<mapping class="com.pack.entity.User"/>
+		<!-- <mapping class="com.pack.entity.Student"/>
+		<mapping class="com.pack.entity.User"/> -->
 				
 	</session-factory>
 

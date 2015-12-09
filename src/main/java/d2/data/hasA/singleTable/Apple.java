@@ -1,4 +1,4 @@
-package day2.data.entity;
+package d2.data.hasA.singleTable;
 
 public class Apple {
 	private int appleId;

@@ -1,5 +1,9 @@
-package day1.data.tester;
+package tester.db;
 
+/**
+ * HAS-A Relationship between User class and Address Class
+ * One Table for all the classes  
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,11 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import day2.data.entity.Address;
-import day2.data.entity.Student;
-import day2.data.entity.User;
+import d2.data.hasA.singleTable.Address;
+import d2.data.hasA.singleTable.Student;
+import d2.data.hasA.singleTable.User;
 
-public class UserTester {
+public class D2HasASingleTable {
 	public static void main(String[] args) {
 		
 		Address address=new Address();

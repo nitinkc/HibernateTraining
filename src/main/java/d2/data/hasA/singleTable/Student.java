@@ -1,4 +1,4 @@
-package day2.data.entity;
+package d2.data.hasA.singleTable;
 
 /**
  * HAS-A Relationship between Student class and Address Class

@@ -1,10 +1,10 @@
-package day1.data.tester;
+package tester.db;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import day2.data.entity.Student;
+import d2.data.hasA.singleTable.Student;
 
 public class StudentTester {
 	public static void main(String[] args) {

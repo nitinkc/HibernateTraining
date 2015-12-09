@@ -1,4 +1,4 @@
-package day2.data.entity;
+package d2.data.hasA.singleTable;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -11,6 +11,7 @@ public class Address {
 	@Column(name="User_City")
 	private String city;
 
+	// Getters and Setters
 	public int getPincode() {
 		return pincode;
 	}

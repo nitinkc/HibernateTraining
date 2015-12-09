@@ -1,12 +1,12 @@
-package day1.data.tester;
+package tester.db;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import day1.data.entity.Student;
+import d1.data.Student;
 
-public class Day1Tester {
+public class D1SingleTable {
 
 	public static void main(String[] args) {
 		Student student1=new Student();
@@ -24,7 +24,6 @@ public class Day1Tester {
 		//create a Session interface ref for all the transaction
 		Session session=sessionFactory.openSession();
 		
-		
 		//Starting the transaction for DB operations
 		session.beginTransaction();		
 		
@@ -33,12 +32,15 @@ public class Day1Tester {
 		session.save(student1);
 		session.save(student2);
 		
+		//Commit the data before saving
+		session.getTransaction().commit();
+
+		
 		// Fetching the data from the database (BEFORE COMMITTING)
 		Student student=(Student)session.get(Student.class, 2);
 		System.out.println("User name is : "+student.getName());
 		
-		session.getTransaction().commit();
+		//Finish the session
 		session.close();		
 	}
-
 }
