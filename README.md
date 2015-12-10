@@ -1,11 +1,14 @@
-#Interesting Observation
+#Important Annotations
 
-Important Annotationa
+- @Entity : The class name gets Set as the table name in DB
+- @Table(name = "MyName") - Customized name. If not given the table name will be the name of the class
 
-  - @Entity : Sets the table name in DB
-  - Renaming Annotations
-  	- @Column(name="User_Id") - resets the name of the column to User_Id in the Database
+- Renaming Annotations
+...- @Column(name="User_Id") - resets the name of the column to User_Id in the Database
   
+- @Embeddable - the class that is needeed (sub)
+- @Embedded - the class where enbaddable is to be used
+
 
 > The overriding design goal for Markdown's
 > formatting syntax is to make it as readable
@@ -15,11 +18,8 @@ Important Annotationa
 > looking like it's been marked up with tags
 > or formatting instructions.
 
-### Version
-3.2.0
-### Installation
+### Annotations examples
 
-You need Gulp installed globally:
 
 ```java
 	@Id
@@ -28,23 +28,13 @@ You need Gulp installed globally:
 	private int uId;
 	@Column(name="User_Name")
 	private String uName;
+	
+	@Column(nullable=false)
 ```
 
 ```sh
 $ git clone [git-repo-url] dillinger
-$ cd dillinger
-$ npm i -d
-$ mkdir -p downloads/files/{md,html,pdf}
-$ gulp build --prod
-$ NODE_ENV=production node app
 ```
 
-First Tab:
-```sh
-$ node app
-```
-
-Second Tab:
-```sh
-$ gulp watch
-```
+### Refer here for maintaining the .md file
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Cheat Sheet")

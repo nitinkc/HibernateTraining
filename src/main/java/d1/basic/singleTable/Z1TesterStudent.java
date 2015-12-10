@@ -1,12 +1,10 @@
-package tester.db;
+package d1.basic.singleTable;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import d1.data.Student;
-
-public class D1SingleTable {
+public class Z1TesterStudent {
 
 	public static void main(String[] args) {
 		Student student1=new Student();

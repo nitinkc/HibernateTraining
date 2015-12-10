@@ -1,4 +1,4 @@
-package d1.data;
+package d1.basic.singleTable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

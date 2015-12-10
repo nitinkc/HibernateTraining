@@ -1,6 +1,11 @@
-package d2.data.hasA.singleTable;
+package d3.hasA.multTab;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Apple {
+	@Id
 	private int appleId;
 	private String appleLocation;
 

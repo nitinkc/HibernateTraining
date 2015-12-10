@@ -1,11 +1,9 @@
-package d2.data.hasA.singleTable;
+package d1.basic.singleTable;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 
 @Embeddable
-public class H2AddressHas_A {
+public class H1Address {
 	//@Column(name="User_Pincode")
 	private int pincode;
 	

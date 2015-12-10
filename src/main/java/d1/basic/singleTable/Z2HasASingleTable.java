@@ -1,4 +1,4 @@
-package tester.db;
+package d1.basic.singleTable;
 
 /**
  * HAS-A Relationship between User class and Address Class
@@ -9,10 +9,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import d2.data.hasA.singleTable.H1Address;
-import d2.data.hasA.singleTable.H1User;
+import d1.basic.singleTable.H1Address;
+import d1.basic.singleTable.H1User;
 
-public class D2HasASingleTable {
+public class Z2HasASingleTable {
 	public static void main(String[] args) {
 		
 		/* 3 address that are used in the User Class*/
@@ -50,7 +50,6 @@ public class D2HasASingleTable {
 		//create a Session interface ref for all the transaction
 		Session session=sessionFactory.openSession();
 		
-		
 		//Starting the transaction for DB operations
 		session.beginTransaction();		
 		
@@ -60,7 +59,7 @@ public class D2HasASingleTable {
 		session.save(user2);
 		session.save(user3);
 		
-		// Retreiving the data - Difference between get and load
+		//Retreiving the data - Difference between get and load
 		H1User h1User=(H1User)session.load(H1User.class, 1);
 		System.out.println(h1User.getuId() + " - " + h1User.getuName() +" - "+ h1User.getuAddress().getCity());
 		

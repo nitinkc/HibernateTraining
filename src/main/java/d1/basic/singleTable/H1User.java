@@ -1,7 +1,4 @@
-package d2.data.hasA.singleTable;
-
-import java.util.ArrayList;
-import java.util.List;
+package d1.basic.singleTable;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -9,15 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
-import javax.persistence.JoinTable;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CollectionOfElements;
-
 @Entity
-@Table(name = "hasASingleTable")
+@Table(name = "")
 public class H1User {
 	@Id
 	@Column(name="User_Id")

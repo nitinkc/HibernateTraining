@@ -38,15 +38,38 @@
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">create</property>
 		
+		<!-- ******************************************************************
+		 *********COMMENT ALL OTHER MAPPINGS TO AVOID HAVING NULL TABLES*******
+		 **********************************************************************
+		-->
 		<!-- User Defined Mapping Class for the d1 Basic table test (THE POJO CLASS THAT GOES INTO DB) -->
-		<mapping class="d1.data.Student"/>
+		<!-- <mapping class="d1.basic.singleTable.Student"/>
 		
-		<!-- For the Has-A Relationship in a single table  -->
-		<mapping class="d2.data.hasA.singleTable.Address"/>
-		<mapping class="d2.data.hasA.singleTable.User"/>
+		For the Has-A Relationship in a single table 
+		<mapping class="d1.basic.singleTable.H1Address"/>
+		<mapping class="d1.basic.singleTable.H1User"/>
+		
+		For the Has-A Relationship in a single table with multiple columns 
+		<mapping class="d2.hasA.singTab.multCol.H2Emp"/>
+		<mapping class="d2.hasA.singTab.multCol.H2EmpAddress"/> -->
 		
 		
-				
+		<!-- For the Has-A Relationship splits in a multIple table with multiple columns  -->
+		<!-- <mapping class="d3.hasA.multTab.H3Emp"/>
+		<mapping class="d3.hasA.multTab.H3EmpAddress"/>  -->
+		
+		<!-- Demostration of pushing Object into a table  -->
+		<!-- <mapping class="d3.hasA.multTab.Apple"/>
+		<mapping class="d3.hasA.multTab.Z2ObjectStateTester"/> -->
+		
+		<!-- One to One Mapping Demonstration -->
+		<!-- <mapping class="d4.hasA.mapping.M1Resident"/>
+		<mapping class="d4.hasA.mapping.M1SSNCard"/> -->
+		
+		<!-- One to Many Demonstration -->
+		<mapping class="d4.hasA.mapping.M2CellPhone"/>
+		<mapping class="d4.hasA.mapping.M2CellUser"/>
+		
 	</session-factory>
-
+	
 </hibernate-configuration>
