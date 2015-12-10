@@ -57,5 +57,4 @@ public class T2OTMTester {
 		session.getTransaction().commit();
 		session.close();
 	}
-
 }
