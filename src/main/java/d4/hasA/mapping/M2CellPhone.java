@@ -1,24 +1,25 @@
 package d4.hasA.mapping;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 
 @Entity
 public class M2CellPhone {
 	
+	/* In this example the primary key is not declared to be int
+	 * String type is set and manually set. It works*/
+	
 	//Testing the String primary Key
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private String modelNo;
 	
 	private String model;
 	
 	@ManyToOne
-	@JoinColumn
+	@JoinTable(name="COMMON_NAME")
 	private M2CellUser user;
 	
 	public String getModelNo() {

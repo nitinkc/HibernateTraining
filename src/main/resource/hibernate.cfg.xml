@@ -40,17 +40,20 @@
 		
 		<!-- ******************************************************************
 		 *********COMMENT ALL OTHER MAPPINGS TO AVOID HAVING NULL TABLES*******
-		 **********************************************************************
-		-->
+		 ********************************************************************** -->
+		 
 		<!-- User Defined Mapping Class for the d1 Basic table test (THE POJO CLASS THAT GOES INTO DB) -->
-		<!-- <mapping class="d1.basic.singleTable.Student"/>
+		<!-- <mapping class="d1.basic.singleTable.Student"/> -->
 		
-		For the Has-A Relationship in a single table 
-		<mapping class="d1.basic.singleTable.H1Address"/>
-		<mapping class="d1.basic.singleTable.H1User"/>
+		<!-- Test for Get Load methods -->
+		<!-- <mapping class="d1.basic.singleTable.Plant"/> -->
 		
-		For the Has-A Relationship in a single table with multiple columns 
-		<mapping class="d2.hasA.singTab.multCol.H2Emp"/>
+		<!-- For the Has-A Relationship in a single table  -->
+		<!-- <mapping class="d1.basic.singleTable.H1Address"/>
+		<mapping class="d1.basic.singleTable.H1User"/> -->
+		
+		<!-- For the Has-A Relationship in a single table with multiple columns --> 
+		<!-- <mapping class="d2.hasA.singTab.multCol.H2Emp"/>
 		<mapping class="d2.hasA.singTab.multCol.H2EmpAddress"/> -->
 		
 		
@@ -58,7 +61,7 @@
 		<!-- <mapping class="d3.hasA.multTab.H3Emp"/>
 		<mapping class="d3.hasA.multTab.H3EmpAddress"/>  -->
 		
-		<!-- Demostration of pushing Object into a table  -->
+		<!-- Demonstration of pushing Object into a table  -->
 		<!-- <mapping class="d3.hasA.multTab.Apple"/>
 		<mapping class="d3.hasA.multTab.Z2ObjectStateTester"/> -->
 		
@@ -67,9 +70,17 @@
 		<mapping class="d4.hasA.mapping.M1SSNCard"/> -->
 		
 		<!-- One to Many Demonstration -->
-		<mapping class="d4.hasA.mapping.M2CellPhone"/>
-		<mapping class="d4.hasA.mapping.M2CellUser"/>
+		<!-- <mapping class="d4.hasA.mapping.M2CellPhone"/>
+		<mapping class="d4.hasA.mapping.M2CellUser"/> -->
 		
+		<!-- Many To Many Mapping Demonstration  -->
+		<!-- <mapping class="d4.hasA.mapping.M3ComputerLab"/>
+		<mapping class="d4.hasA.mapping.M3Student"/> -->		
+		
+		<!-- Inheritance (Default) Table per Hierarchy -->
+		<mapping class="d5.inheritance.Fruits"/>
+		<mapping class="d5.inheritance.SummerFruits"/>
+		<mapping class="d5.inheritance.WinterFruits"/>
 	</session-factory>
 	
 </hibernate-configuration>
